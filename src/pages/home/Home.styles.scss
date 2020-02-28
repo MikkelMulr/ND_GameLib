@@ -1,0 +1,100 @@
+@import '../../_colors.scss';
+@import '../../_fonts.scss';
+
+.Home {
+	min-height: calc(100vh - 68px);
+	height: 100%;
+	width: 100vw;
+	font-family: $font-primary;
+	background-color: $bg-primary;
+
+	&--header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		width: 100vw;
+		height: 50vh;
+		background-image: url('../../assets/img/controller-bg.jpg');
+		background-position: 0% 30%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-bottom: 16px solid $accent-primary;
+		line-height: 5rem;
+
+		h1 {
+			font-size: 8rem;
+			font-weight: bold;
+		}
+
+		h2 {
+			font-size: 5rem;
+			font-weight: lighter;
+		}
+	}
+	&--search-area {
+		padding-top: 1rem;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+
+		.search-btn {
+			width: 7rem;
+			height: 2.8rem;
+			padding: 0.5rem 1rem;
+			outline: none;
+			border: none;
+			border-radius: 0 10px 10px 0;
+			background-color: $accent-primary;
+			color: $bg-primary;
+			font-size: 1.2rem;
+			font-weight: bold;
+			cursor: pointer;
+			transition: all 0.2s linear;
+		}
+
+		.search-btn:hover {
+			background-color: $accent-primary-dark;
+			color: white;
+		}
+
+		.text-input {
+			border-radius: 10px 0 0 10px;
+			font-size: 1.3rem;
+			padding: 0.5rem 1rem;
+			outline: none;
+			border: none;
+			height: 2.8rem;
+			width: 28rem;
+		}
+	}
+
+	&--trending {
+		max-width: 100vw;
+		width: 100vw;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-around;
+		height: auto;
+		padding: 1rem 5rem;
+		flex-wrap: wrap;
+	}
+
+	&--results {
+		max-width: 100vw;
+		height: auto;
+		width: 100vw;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-around;
+		height: auto;
+		padding: 1rem 5rem;
+		flex-wrap: wrap;
+	}
+}
