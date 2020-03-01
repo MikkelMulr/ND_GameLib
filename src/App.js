@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './components/header/Header.component';
 import Home from './pages/home/Home.component';
 import Game from './pages/game/Game.component';
-import axios from 'axios';
+// import axios from 'axios';
 
 // https://api-v3.igdb.com
 // api key 2eb22685103f241e827ecc8d80a37538

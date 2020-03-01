@@ -42,7 +42,7 @@ class Home extends Component {
 							data: `where id = ${res.data[i].cover}; fields *;`
 						})
 							.then((response) => {
-								// console.log(response.data);
+								console.log(response.data);
 								this.setState({
 									trending: [
 										...this.state.trending,
@@ -52,6 +52,13 @@ class Home extends Component {
 											gameID={res.data[i].id}
 											key={res.data[i].id}
 											cover={response.data[0].image_id}
+											summary={res.data[i].summary}
+											companies={res.data[i].involved_companies}
+											platform={res.data[i].platform}
+											release={res.data[i].release_dates}
+											screenshots={res.data[i].screenshots}
+											similar_games={res.data[i].similar_games}
+											videos={res.data[i].videos}
 										/>
 									]
 								});
@@ -77,6 +84,13 @@ class Home extends Component {
 						gameID={item.props.gameID}
 						key={item.props.gameID}
 						cover={item.props.cover}
+						summary={item.props.summary}
+						companies={item.props.companies}
+						platform={item.props.platform}
+						release={item.props.release}
+						screenshots={item.props.screenshots}
+						similar_games={item.props.similar_games}
+						videos={item.props.videos}
 					/>
 				);
 			});
@@ -117,12 +131,20 @@ class Home extends Component {
 							this.setState({
 								results: [
 									...this.state.results,
+
 									<GameCard
 										name={res.name}
 										coverID={res.cover}
 										gameID={res.id}
 										key={res.id}
 										cover={response.data[0].image_id}
+										summary={res.summary}
+										companies={res.involved_companies}
+										platform={res.platform}
+										release={res.release_dates}
+										screenshots={res.screenshots}
+										similar_games={res.similar_games}
+										videos={res.videos}
 									/>
 								]
 							});
